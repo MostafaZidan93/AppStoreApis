@@ -18,9 +18,10 @@ class AppsGroupCell: UICollectionViewCell {
     override init(frame: CGRect) {
         super.init(frame: frame)
         
-        backgroundColor = .purple
+        
+        
         addSubview(titleLabel)
-        titleLabel.anchor(top: topAnchor, leading: leadingAnchor, bottom: nil, trailing: trailingAnchor)
+        titleLabel.anchor(top: topAnchor, leading: leadingAnchor, bottom: nil, trailing: trailingAnchor, padding: .init(top: 0, left: 16, bottom: 0, right: 0))
         
         
         //Horizontal Controller
@@ -34,11 +35,3 @@ class AppsGroupCell: UICollectionViewCell {
 }
 
 
-//MARK: - UILabel Extension
-extension UILabel {
-    convenience init(text: String, font: UIFont) {
-        self.init()
-        self.text = text
-        self.font = font
-    }
-}
