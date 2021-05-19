@@ -12,6 +12,7 @@ import UIKit
 class AppsPageController: BaseListController {
     
     private let cellId = "id"
+    private let headerId = "headerId"
     
     
     override func viewDidLoad() {
@@ -21,6 +22,23 @@ class AppsPageController: BaseListController {
         
         
         collectionView.register(AppsGroupCell.self, forCellWithReuseIdentifier: cellId)
+        //Registering a header
+        collectionView.register(AppsPageHeader.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: headerId)
+        
+        //Fetching Data
+        fetchData()
+    }
+    
+    
+    fileprivate func fetchData() {
+        APIService.shared.fetchGames { (appGroups, error) in
+            if let error = error {
+                print("Error Feching data: ", error)
+                return
+            } else {
+                print("data count is: ", appGroups!.feed.results.count)
+            }
+        }
     }
     
     
@@ -33,6 +51,19 @@ class AppsPageController: BaseListController {
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath) as! AppsGroupCell
         return cell
+    }
+    
+    
+    //Generating Upper Header Supplementary View
+    override func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+        let header = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: headerId, for: indexPath)
+        
+        return header
+    }
+    
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
+        return .init(width: view.frame.width, height: 300)
     }
     
     
