@@ -41,7 +41,7 @@ class APIService {
     
     //MARK: - Fetching Games
     func fetchGames(completion: @escaping (AppGroup?, Error?) -> Void) {
-        guard let gamesUrl = URL(string: "https://rss.itunes.apple.com/api/v1/us/ios-apps/new-games-we-love/all/50/explicit.json")
+        guard let gamesUrl = URL(string: "https://rss.itunes.apple.com/api/v1/us/ios-apps/top-grossing/all/10/explicit.json")
             else {return}
         URLSession.shared.dataTask(with: gamesUrl) { (data, response, error) in
             if let error = error {

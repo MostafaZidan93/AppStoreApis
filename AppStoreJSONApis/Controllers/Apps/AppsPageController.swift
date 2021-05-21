@@ -10,11 +10,13 @@ import UIKit
 
 
 class AppsPageController: BaseListController {
-    
+    //Vars
     private let cellId = "id"
     private let headerId = "headerId"
+    var editorsChoiceGames: AppGroup?
     
     
+    //MARK: - View Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -36,7 +38,10 @@ class AppsPageController: BaseListController {
                 print("Error Feching data: ", error)
                 return
             } else {
-                print("data count is: ", appGroups!.feed.results.count)
+                self.editorsChoiceGames = appGroups
+                DispatchQueue.main.async {
+                    self.collectionView.reloadData()
+                }
             }
         }
     }
@@ -44,12 +49,18 @@ class AppsPageController: BaseListController {
     
     //MARK: - CollectionView DataSource
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 5
+        return 1
     }
     
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath) as! AppsGroupCell
+        
+        
+        cell.titleLabel.text = editorsChoiceGames?.feed.title
+        cell.horizontalController.appGroup = editorsChoiceGames
+        
+        
         return cell
     }
     
