@@ -12,7 +12,11 @@ import UIKit
 class AppsHeaderHorizontalController: BaseListController {
     
     private let cellId = "cellId"
-    
+    var socialApps = [SocialApp]() {
+        didSet {
+            collectionView.reloadData()
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,12 +31,16 @@ class AppsHeaderHorizontalController: BaseListController {
     
     //MARK: - CollectionView Data Source
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 3
+        return socialApps.count
     }
     
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath) as! AppsHeaderCell
+        let socialApp = socialApps[indexPath.item]
+        cell.companyLabel.text = socialApp.name
+        cell.titleLabel.text = socialApp.tagline
+        cell.imageView.sd_setImage(with: URL(string: socialApp.imageUrl))
         return cell
     }
     

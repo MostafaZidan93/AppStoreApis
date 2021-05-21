@@ -11,7 +11,7 @@ import UIKit
 
 class AppsHorizontalController: BaseListController {
     
-    //Vars
+    //MARK: - Vars
     var appGroup: AppGroup? {
         didSet {
             collectionView.reloadData()
