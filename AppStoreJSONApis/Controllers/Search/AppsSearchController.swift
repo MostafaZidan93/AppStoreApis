@@ -12,7 +12,7 @@ import SDWebImage
 
 class AppsSearchController: BaseListController, UISearchBarDelegate {
     
-    //Vars
+    //MARK: - Vars
     fileprivate var appResults = [Result]()
     fileprivate var searchController = UISearchController(searchResultsController: nil)
     fileprivate let cellId = "id1234"
@@ -58,13 +58,13 @@ class AppsSearchController: BaseListController, UISearchBarDelegate {
         
         timer?.invalidate()
         timer = Timer.scheduledTimer(withTimeInterval: 0.5, repeats: false) { (_) in
-            APIService.shared.fetchApps(searchTerm: searchText) { (results, error) in
+            APIService.shared.fetchApps(searchTerm: searchText) { (res, error) in
                 if let error = error {
                     print("Failed to Fetch apps: ", error)
                     return
                 }
                 
-                self.appResults = results
+                self.appResults = res?.results ?? []
                 DispatchQueue.main.async {
                     self.collectionView.reloadData()
                 }
@@ -75,13 +75,13 @@ class AppsSearchController: BaseListController, UISearchBarDelegate {
     
     //MARK: - URLSession Task
     fileprivate func fetchITunesApps() {
-        APIService.shared.fetchApps { (results, error) in
+        APIService.shared.fetchApps { (res, error) in
             if let error = error {
                 print("Failed to Fetch apps: ", error)
                 return
             }
             
-            self.appResults = results
+            self.appResults = res?.results ?? []
             DispatchQueue.main.async {
                 self.collectionView.reloadData()
             }

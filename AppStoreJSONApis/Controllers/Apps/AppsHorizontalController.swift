@@ -9,9 +9,10 @@
 import UIKit
 
 
-class AppsHorizontalController: BaseListController {
+class AppsHorizontalController: HorizontalSnappingController {
     
     //MARK: - Vars
+    var didSelectHandler: ((FeedResult) -> ())?
     var appGroup: AppGroup? {
         didSet {
             collectionView.reloadData()
@@ -24,9 +25,7 @@ class AppsHorizontalController: BaseListController {
         collectionView.backgroundColor = .white
         
         collectionView.register(AppRowCell.self, forCellWithReuseIdentifier: cellId)
-        if let flowLayout = collectionViewLayout as? UICollectionViewFlowLayout {
-            flowLayout.scrollDirection = .horizontal
-        }
+        collectionView.contentInset = .init(top: 0, left: 16, bottom: 0, right: 16)
     }
     
     
@@ -63,7 +62,8 @@ class AppsHorizontalController: BaseListController {
     }
     
     
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-        return .init(top: 10, left: 16, bottom: 10, right: 16)
+    //MARK: - CollectionView Delegate Methods
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        didSelectHandler!((appGroup?.feed.results[indexPath.item])!)
     }
 }

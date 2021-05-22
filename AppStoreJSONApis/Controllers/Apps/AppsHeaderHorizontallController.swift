@@ -9,7 +9,7 @@
 import UIKit
 
 
-class AppsHeaderHorizontalController: BaseListController {
+class AppsHeaderHorizontalController: HorizontalSnappingController {
     
     private let cellId = "cellId"
     var socialApps = [SocialApp]() {
@@ -23,9 +23,7 @@ class AppsHeaderHorizontalController: BaseListController {
         
         collectionView.backgroundColor = .white
         collectionView.register(AppsHeaderCell.self, forCellWithReuseIdentifier: cellId)
-        if let flowLayout = collectionViewLayout as? UICollectionViewFlowLayout{
-            flowLayout.scrollDirection = .horizontal
-        }
+        collectionView.contentInset = .init(top: 0, left: 16, bottom: 0, right: 16)
     }
     
     
@@ -45,9 +43,9 @@ class AppsHeaderHorizontalController: BaseListController {
     }
     
     
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-        return .init(top: 0, left: 16, bottom: 0, right: 0)
-    }
+//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+//        return .init(top: 0, left: 16, bottom: 0, right: 8)
+//    }
     
     
     //MARK: - CollectioView Flow Layout Delegate Methods
