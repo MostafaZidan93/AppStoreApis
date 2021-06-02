@@ -17,12 +17,20 @@ class AppDetailCell: UICollectionViewCell {
     let priceButton = UIButton(title: "$4.99")
     let whatsNewLabel = UILabel(text: "What's New", font: .boldSystemFont(ofSize: 18))
     let releaseNotesLabel = UILabel(text: "ReleaseNotes", font: .systemFont(ofSize: 16), numberOfLines: 0)
+    var app: Result! {
+        didSet {
+            nameLabel.text = app?.trackName
+            priceButton.setTitle(app?.formattedPrice, for: .normal)
+            releaseNotesLabel.text = app?.releaseNotes
+            whatsNewLabel.text = app?.description
+            appIconImageView.sd_setImage(with: URL(string: app?.artworkUrl100 ?? ""))
+        }
+    }
     
     override init(frame: CGRect) {
         super.init(frame: frame)
         
         //App Icon Image
-        appIconImageView.backgroundColor = .blue
         appIconImageView.constrainWidth(constant: 140)
         appIconImageView.constrainHeight(constant: 140)
         
@@ -36,6 +44,8 @@ class AppDetailCell: UICollectionViewCell {
         priceButton.layer.cornerRadius = 32 / 2
         
         
+        //Release Notes Label
+        releaseNotesLabel.numberOfLines = 0
         
         let stackView = VerticalStackView(arrangedSubviews: [
             UIStackView(arrangedSubviews: [

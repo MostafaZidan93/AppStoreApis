@@ -11,10 +11,12 @@ import UIKit
 
 class AppRowCell: UICollectionViewCell {
     
+    //MARK: - Vars
     let imageView = UIImageView(cornerRadius: 8)
     let getButton = UIButton(title: "GET")
     let nameLabel = UILabel(text: "App Name", font: .systemFont(ofSize: 16))
     let companyLabel = UILabel(text: "Company Name", font: .systemFont(ofSize: 12))
+    
     
     override init(frame: CGRect) {
         super.init(frame: frame)

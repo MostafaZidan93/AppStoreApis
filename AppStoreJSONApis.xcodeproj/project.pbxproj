@@ -16,6 +16,17 @@
 		C4522B9C26541CF30099CFE6 /* VerticalStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4522B9B26541CF30099CFE6 /* VerticalStackView.swift */; };
 		C4522B9F265430EC0099CFE6 /* SearchResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4522B9E265430EC0099CFE6 /* SearchResult.swift */; };
 		C4522BA2265439AA0099CFE6 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4522BA1265439AA0099CFE6 /* APIService.swift */; };
+		C45777DC26613230002FCAD5 /* AppFullScreenDescriptionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C45777DB26613230002FCAD5 /* AppFullScreenDescriptionCell.swift */; };
+		C45777DE26614A3F002FCAD5 /* AppFullScreenHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C45777DD26614A3F002FCAD5 /* AppFullScreenHeaderCell.swift */; };
+		C4599FB3265EB2FE00BB822A /* AppFullScreenController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4599FB2265EB2FE00BB822A /* AppFullScreenController.swift */; };
+		C45A4F5D265BC54A00349F69 /* PreviewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C45A4F5C265BC54A00349F69 /* PreviewCell.swift */; };
+		C45A4F5F265BC9EC00349F69 /* PreviewScreenshotsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C45A4F5E265BC9EC00349F69 /* PreviewScreenshotsController.swift */; };
+		C45AD2D9265C271400A25901 /* Review.swift in Sources */ = {isa = PBXBuildFile; fileRef = C45AD2D8265C271400A25901 /* Review.swift */; };
+		C45AD2DC265C5BD000A25901 /* TodayController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C45AD2DB265C5BD000A25901 /* TodayController.swift */; };
+		C45AD2DF265C5D1600A25901 /* TodayCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C45AD2DE265C5D1600A25901 /* TodayCell.swift */; };
+		C45E392A265C068D00639046 /* ReviewRowCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C45E3929265C068D00639046 /* ReviewRowCell.swift */; };
+		C45E392C265C07C100639046 /* HorizontalReviewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C45E392B265C07C100639046 /* HorizontalReviewController.swift */; };
+		C45E392E265C0F2700639046 /* ReviewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C45E392D265C0F2700639046 /* ReviewCell.swift */; };
 		C45E4A02265955FF0074AE00 /* AppDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C45E4A01265955FF0074AE00 /* AppDetailCell.swift */; };
 		C45FAA2A2658556800D26C70 /* HorizontalSnappingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C45FAA292658556800D26C70 /* HorizontalSnappingController.swift */; };
 		C45FAA2F265876ED00D26C70 /* AppDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C45FAA2E265876ED00D26C70 /* AppDetailController.swift */; };
@@ -47,6 +58,17 @@
 		C4522B9B26541CF30099CFE6 /* VerticalStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerticalStackView.swift; sourceTree = "<group>"; };
 		C4522B9E265430EC0099CFE6 /* SearchResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResult.swift; sourceTree = "<group>"; };
 		C4522BA1265439AA0099CFE6 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
+		C45777DB26613230002FCAD5 /* AppFullScreenDescriptionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFullScreenDescriptionCell.swift; sourceTree = "<group>"; };
+		C45777DD26614A3F002FCAD5 /* AppFullScreenHeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFullScreenHeaderCell.swift; sourceTree = "<group>"; };
+		C4599FB2265EB2FE00BB822A /* AppFullScreenController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFullScreenController.swift; sourceTree = "<group>"; };
+		C45A4F5C265BC54A00349F69 /* PreviewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewCell.swift; sourceTree = "<group>"; };
+		C45A4F5E265BC9EC00349F69 /* PreviewScreenshotsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewScreenshotsController.swift; sourceTree = "<group>"; };
+		C45AD2D8265C271400A25901 /* Review.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Review.swift; sourceTree = "<group>"; };
+		C45AD2DB265C5BD000A25901 /* TodayController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayController.swift; sourceTree = "<group>"; };
+		C45AD2DE265C5D1600A25901 /* TodayCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayCell.swift; sourceTree = "<group>"; };
+		C45E3929265C068D00639046 /* ReviewRowCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewRowCell.swift; sourceTree = "<group>"; };
+		C45E392B265C07C100639046 /* HorizontalReviewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalReviewController.swift; sourceTree = "<group>"; };
+		C45E392D265C0F2700639046 /* ReviewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewCell.swift; sourceTree = "<group>"; };
 		C45E4A01265955FF0074AE00 /* AppDetailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDetailCell.swift; sourceTree = "<group>"; };
 		C45FAA292658556800D26C70 /* HorizontalSnappingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalSnappingController.swift; sourceTree = "<group>"; };
 		C45FAA2E265876ED00D26C70 /* AppDetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDetailController.swift; sourceTree = "<group>"; };
@@ -115,6 +137,7 @@
 		C4522B952653EBDD0099CFE6 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				C45AD2DD265C5CE700A25901 /* Today */,
 				C4FBBD5E26553D9A006FE1E3 /* Apps */,
 				C4FBBD5D26553D8F006FE1E3 /* Search */,
 			);
@@ -137,6 +160,7 @@
 				C4522B9E265430EC0099CFE6 /* SearchResult.swift */,
 				C463EF482655B72D003AA332 /* AppGroup.swift */,
 				C44AA2792657FB3B008A6D12 /* SocialApp.swift */,
+				C45AD2D8265C271400A25901 /* Review.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -149,10 +173,32 @@
 			path = Service;
 			sourceTree = "<group>";
 		};
+		C45AD2DA265C5B5E00A25901 /* Today */ = {
+			isa = PBXGroup;
+			children = (
+				C45AD2DB265C5BD000A25901 /* TodayController.swift */,
+				C4599FB2265EB2FE00BB822A /* AppFullScreenController.swift */,
+			);
+			path = Today;
+			sourceTree = "<group>";
+		};
+		C45AD2DD265C5CE700A25901 /* Today */ = {
+			isa = PBXGroup;
+			children = (
+				C45AD2DE265C5D1600A25901 /* TodayCell.swift */,
+				C45777DB26613230002FCAD5 /* AppFullScreenDescriptionCell.swift */,
+				C45777DD26614A3F002FCAD5 /* AppFullScreenHeaderCell.swift */,
+			);
+			path = Today;
+			sourceTree = "<group>";
+		};
 		C45E4A00265955E80074AE00 /* Details */ = {
 			isa = PBXGroup;
 			children = (
 				C45E4A01265955FF0074AE00 /* AppDetailCell.swift */,
+				C45A4F5C265BC54A00349F69 /* PreviewCell.swift */,
+				C45E3929265C068D00639046 /* ReviewRowCell.swift */,
+				C45E392D265C0F2700639046 /* ReviewCell.swift */,
 			);
 			path = Details;
 			sourceTree = "<group>";
@@ -161,6 +207,8 @@
 			isa = PBXGroup;
 			children = (
 				C45FAA2E265876ED00D26C70 /* AppDetailController.swift */,
+				C45A4F5E265BC9EC00349F69 /* PreviewScreenshotsController.swift */,
+				C45E392B265C07C100639046 /* HorizontalReviewController.swift */,
 			);
 			path = Details;
 			sourceTree = "<group>";
@@ -205,6 +253,7 @@
 		C48EEF082653375100E13088 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				C45AD2DA265C5B5E00A25901 /* Today */,
 				C408D70526553A1D00FC10DF /* Search */,
 				C408D70426553A1800FC10DF /* Apps */,
 				C48EEF0626531F5700E13088 /* BaseTabBarController.swift */,
@@ -360,26 +409,37 @@
 				C4522B9A265400B40099CFE6 /* 05_UIView+Layout.swift in Sources */,
 				C44AA27A2657FB3B008A6D12 /* SocialApp.swift in Sources */,
 				C408D701265537EB00FC10DF /* AppsPageController.swift in Sources */,
+				C45E392E265C0F2700639046 /* ReviewCell.swift in Sources */,
 				C4522B9F265430EC0099CFE6 /* SearchResult.swift in Sources */,
+				C45AD2D9265C271400A25901 /* Review.swift in Sources */,
 				C48EEF0726531F5700E13088 /* BaseTabBarController.swift in Sources */,
 				C48EEEF726531E8900E13088 /* ViewController.swift in Sources */,
 				C48EEEF326531E8900E13088 /* AppDelegate.swift in Sources */,
 				C4FBBD6026553DC4006FE1E3 /* AppsGroupCell.swift in Sources */,
 				C48EEF0A265337C800E13088 /* AppsSearchController.swift in Sources */,
+				C45777DC26613230002FCAD5 /* AppFullScreenDescriptionCell.swift in Sources */,
+				C45AD2DF265C5D1600A25901 /* TodayCell.swift in Sources */,
+				C45E392A265C068D00639046 /* ReviewRowCell.swift in Sources */,
+				C45777DE26614A3F002FCAD5 /* AppFullScreenHeaderCell.swift in Sources */,
 				C45FAA2A2658556800D26C70 /* HorizontalSnappingController.swift in Sources */,
 				C45E4A02265955FF0074AE00 /* AppDetailCell.swift in Sources */,
 				C4522BA2265439AA0099CFE6 /* APIService.swift in Sources */,
+				C45A4F5F265BC9EC00349F69 /* PreviewScreenshotsController.swift in Sources */,
 				C4522B9C26541CF30099CFE6 /* VerticalStackView.swift in Sources */,
 				C463EF4326559EC9003AA332 /* AppsPageHeader.swift in Sources */,
 				C4522B972653EC140099CFE6 /* SearchResultCell.swift in Sources */,
 				C463EF4126558C81003AA332 /* Extensions.swift in Sources */,
+				C45A4F5D265BC54A00349F69 /* PreviewCell.swift in Sources */,
 				C408D7032655398C00FC10DF /* BaseListController.swift in Sources */,
+				C45AD2DC265C5BD000A25901 /* TodayController.swift in Sources */,
 				C48EEEF526531E8900E13088 /* SceneDelegate.swift in Sources */,
 				C463EF492655B72D003AA332 /* AppGroup.swift in Sources */,
 				C45FAA2F265876ED00D26C70 /* AppDetailController.swift in Sources */,
 				C463EF472655A80B003AA332 /* AppsHeaderCell.swift in Sources */,
+				C4599FB3265EB2FE00BB822A /* AppFullScreenController.swift in Sources */,
 				C463EF452655A26E003AA332 /* AppsHeaderHorizontallController.swift in Sources */,
 				C4FBBD62265549E6006FE1E3 /* AppsHorizontalController.swift in Sources */,
+				C45E392C265C07C100639046 /* HorizontalReviewController.swift in Sources */,
 				C463EF3F26558B97003AA332 /* AppRowCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

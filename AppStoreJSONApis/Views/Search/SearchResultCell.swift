@@ -10,7 +10,7 @@ import UIKit
 
 class SearchResultCell: UICollectionViewCell {
  
-    //Vars
+    //MARK: - Vars
     var appResult: Result! {
         didSet {
             //Setting up labels
